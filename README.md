@@ -82,4 +82,16 @@ composer install
 3. Open url, see the result.
 4. Open /config.php (http://symfony-local.loc/config.php) to see recommendation from symfony configuration.
 5. Press (Re-check configuration) to see the result of settings.
+6. To install PHP Accelerator you should download it from http://pecl.php.net/package/APCu/4.0.8/windows
+(5.6 Thread Safe (TS) x86) and then open php.ini, add following strings:
+~~~
+[APCu]
+extension=php_apcu.dll
+apc.enabled=1
+apc.shm_size=32M
+apc.ttl=7200
+apc.enable_cli=1
+apc.serializer=php
+~~~
+Save the result and restart apache server.
 
